@@ -1,0 +1,57 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+Qualification
+{% endblock %}
+
+{% block content %}
+
+
+<div class="instructions well well-lg">
+<h3>INDIANA UNIVERSITY INFORMED CONSENT STATEMENT</h3>
+<h4>Trading Institutions in Financial Asset Market Experiments -- IRB Study #1112007656</h4>
+
+<p>Thank you for agreeing to participate in our research.  Before you begin, please note that the data you provide may be collected and used by Amazon as per its privacy agreement.  Additionally, this research is for residents of the United States over the age of 18; if you are not a resident of the United States and/or under the age of 18, please do not complete this survey.</p>
+
+<p>You are invited to participate in an academic study on financial asset markets in which many players simultaneously interact. You will participate in a series of trading rounds where you will make decisions about buying and selling. You will also be asked to complete a demographic survey at the end of the study. The study will last approximately 45 minutes.</p>
+
+<h5>RISKS</h5>
+<p>There may be a minimal risk of loss of confidentiality. Steps taken to minimize this risk are addressed in the Confidentiality section below.</p>
+
+<h5>BENEFITS of THIS STUDY </h5>
+<p>You may receive no direct benefit from participation in this study, however your decisions and those of others in this study will be used by the researchers for research purposes. </p>
+
+<h5>CONFIDENTIALITY</h5>
+
+<p>The data in this study will be held in confidence. You will not be asked to identify yourself. While it is understood that no computer transmission can be perfectly secure, reasonable efforts will be made to protect the confidentiality of your transmission.</p>
+
+<h5>FUTURE USE OF DATA</h5>
+
+<p>Information for this study may be used for future research studies or shared with other researchers for future research.  If this happens, information which could identify you will be removed before any information is shared.  Since identifying information will be removed, we will not ask for your additional consent.</p>
+
+<h5>COMPENSATION</h5>
+
+<p>You will be paid your earnings, based on your decisions and those of others in the study. Average earnings will fall in the $2.00 to $8.00 range. You will receive $2 for completing the instructions, and a bonus that depends on your decisions and those of others in the study. You need to complete the entire study, including the demographic survey at the end, in order for the HIT to be approved.</p>
+
+
+<h5>CONTACTS FOR QUESTIONS OR PROBLEMS</h5>
+
+<p>If you have questions at any time about the study or the procedures, you may contact the researchers, Joe Seidel at joeseid@iu.edu, Professor Daniela Puzzello at dpuzzell@indiana.edu, or Professor Volodymyr Lugovskyy at vlugovsk@indiana.edu.</p>
+
+<p>For questions about your rights as a research participant or to discuss problems, complaints or concerns about a research study, or to obtain information, or offer input, contact the IU Human Subjects office at 800-696-2949 or irb@iu.edu. This research has been reviewed according to IU procedures governing research participation.</p>
+
+<h5>VOLUNTARY PARTICIPATION</h5>
+
+<p>Taking part in this study is voluntary; you may refuse to participate without penalty.  You may choose not to take part or may leave the study at any time.  Leaving the study will not result in any penalty or loss of benefits to which you are entitled.  Your decision whether or not to participate in this study will not affect your current or future relations with the investigator(s) or with Indiana University. If you wish not to participate, please inform the researchers.</p>
+
+</div>
+
+    {% for field in form %}
+        {% formfield field %}
+    {% endfor %}
+
+  {% next_button %}
+
+
+{% endblock %}

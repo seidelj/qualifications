@@ -1,0 +1,24 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+   Payment Information
+{% endblock %}
+
+{% block content %}
+
+{% if player.participant.vars.passed_quiz == 1 %}
+
+    <p>Clicking the next button concludes this HIT.  Your earnings are summarized below.</p>
+    <p>Reward: {{ session.config.participation_fee }}</p>
+    <p>Bonus (from market activity): {{ payoff }}</p>
+    <p><strong>Total: {{ player.participant.payoff_plus_participation_fee }}</strong></p>
+    <p>The next page will display the completion code.  You will receive payment shortly after submitting the the HIT.</p>
+
+    {% next_button %}
+
+{% endif %}
+
+
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Thank you.
+{% endblock %}
+
+{% block content %}
+    <p>Your response has been recorded.</p>
+    {% if player.consent %}
+    <p>You have been granted a qualification and will receive a message when the HIT is posted {{ date_str }}</p>
+    {% endif %}
+
+    {% next_button %}
+{% endblock %}

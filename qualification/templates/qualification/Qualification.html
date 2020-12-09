@@ -1,0 +1,25 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+Qualification
+{% endblock %}
+
+{% block content %}
+
+<p>{{ date_str }} I will run an academic study on financial asset markets in which many players will simultaneously interact with one another.</p>
+
+<p>It is important that all participants start at the same time, otherwise the study will not launch.  <strong>In order to participate and receive payment you must arrive at the HIT promptly at the start time and complete a demographic survey at the conclusion.</strong>  The experiment will last approximately 45 minutes.</p>
+
+<p>You will be paid your earnings, based on your decisions and those of others in the study. Average earnings will fall in the $2.00 to $8.00 range. You will receive $2 for completing the instructions, and a bonus that depends on your decisions and those of others in the study. <strong>You need to complete the entire study, including the demographic survey at the end, in order for the HIT to be approved.</strong></p>
+
+<p>If you indicate you would like to participate, a qualification will be granted and you will receive a message when the HIT is posted.</p>
+
+    {% for field in form %}
+        {% formfield field %}
+    {% endfor %}
+
+  {% next_button %}
+
+
+{% endblock %}
